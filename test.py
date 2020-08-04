@@ -24,3 +24,5 @@ danhsachtracuu = Tra_Cuu("sony",Doc_Danh_Sach_Tivi())
 print (len(danhsachtracuu))
 for i in danhsachtracuu:
     print (i['Ten'])
+
+# 1
