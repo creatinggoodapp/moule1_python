@@ -14,13 +14,14 @@ def nhaphang():
         tim_tivi =result.get('TH_tim_tivi')
         dsTimTivi = Tra_Cuu(tim_tivi,dsTivi)
         if len (dsTimTivi) > 0:
-            chuoiHTML = Danh_sach_Tivi_Ban_Hang_HTML(dsTimTivi)
+            chuoiHTML = Danh_sach_Tivi_Nhap_Hang_HTML(dsTimTivi)
         else:
             chuoiHTML = "Khong tim thay ten Tivi!"
             
     elif request.method == 'GET':
-        chuoiHTML = Danh_sach_Tivi_Ban_Hang_HTML(dsTivi)
-
+        chuoiHTML = Danh_sach_Tivi_Nhap_Hang_HTML(dsTivi)
+    
+    print(chuoiHTML)
     return render_template('khach_tham_quan/index.html',chuoiHTML=Markup(chuoiHTML))
 
 #http://localhost:5001/nhan_vien_ban_hang?maso=
